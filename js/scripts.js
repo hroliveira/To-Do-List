@@ -8,6 +8,8 @@ const cancelEditBtn = document.querySelector("#cancel-edit-btn");
 const searchInput = document.querySelector("#search-input");
 const eraseBtn = document.querySelector("#erase-button");
 const filterBtn = document.querySelector("#filter-select");
+const SpreadsheetApp = GoogleAppsScript.getService().getSpreadsheetApp();
+
 
 let oldInputValue;
 
@@ -36,6 +38,7 @@ const saveTodo = (text, done = 0, save = 1) => {
    todo.appendChild(deleteBtn);
  
    // Utilizando dados da localStorage
+   
    if (done) {
      todo.classList.add("done");
    }
